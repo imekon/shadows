@@ -102,3 +102,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, -20 )
 
 [node name="Craft" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -8 )
+
+[node name="CrateSpawnPoint" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -10 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.7
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="on_crate_timeout"]
